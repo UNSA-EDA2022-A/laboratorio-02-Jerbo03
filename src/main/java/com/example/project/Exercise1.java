@@ -17,7 +17,7 @@ public class Exercise1 {
 	 * Tenemos que un numero cuadrado siempre sera producto de otros 2 cuadrados
 	 * n^2 = a^2 * b^2
 	 * Por ejemplo: 64 = 4^2 * 2^2
-	 * Mi cógido buscará dividir el numero que queremos probar entre cuadrados perfectos
+	 * Mi codigo buscara dividir el numero que queremos probar entre cuadrados perfectos
 	 * Si llega a 1, es porque el numero si es un cuadrado perfecto
 	 * Si no es divisible, llegara a 0, false
 	 */
