@@ -10,6 +10,8 @@ public class Exercise1 {
 		Scanner sc = new Scanner(System.in);
 		while (true) {
 			int n = sc.nextInt();
+			System.out.println(n);
+			System.out.println(n/0);
 			System.out.println(obj.esCuadradoPerfecto(n));			
 		}
 	}
