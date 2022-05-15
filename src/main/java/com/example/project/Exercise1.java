@@ -35,7 +35,8 @@ public class Exercise1 {
 	
 	public int esDivisblePorCuadradoPerfecto(int numero, int divisor) {
 		// Si el cuadrado del divisor es mayor al numero, el numero no es cuadrado
-		if ((int) Math.pow(divisor, 2) > numero) return 0;
+		if ((int) Math.pow(divisor, 2) > numero)
+			return 0;
 		// Si la division no exacta, probamos con el siguiente cuadrado como divisor
 		if (numero % (int) Math.pow(divisor, 2) > 0)
 			return esDivisblePorCuadradoPerfecto(numero, divisor + 1);
