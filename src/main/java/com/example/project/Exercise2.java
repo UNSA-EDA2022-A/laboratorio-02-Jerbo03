@@ -13,7 +13,7 @@ public class Exercise2 {
 			int n = sc.nextInt(), suma;
 			int a[] = new int[n];
 
-			for (int i = 0; i < a.length; i++) { // n no debería actualizarse si se va a comparar
+			for (int i = 0; i < a.length; i++) { // n no deberia actualizarse si se va a comparar
 				n = sc.nextInt();
 				a[i] = n;
 			}
@@ -34,7 +34,9 @@ public class Exercise2 {
 			return false;
 		// Guardamos el ultimo valor del array antes de eliminarlo y para analizarlo
 		int last = a[a.length-1];
-		// si este valor es 1
+		// Eliminamos el ultimo valor, ya que no tenemos un indice n en la funcion
+		a = copyOf(a, a.length-1);
+		// si el ultimo valor es 1
 		if (last == 1 && a.length>1)
 			// Revisa, si se puede, si el valor siguiente es multiplo de 7
 			if (a[a.length-2] % 7 == 0)
@@ -44,8 +46,6 @@ public class Exercise2 {
 		if (last != 0 && last % 7 == 0)
 			// Se considera obligatoriamente en la suma
 			return esSubconjuntoSumaExt(a, suma - last);
-		// Eliminamos el ultimo valor, ya que no tenemos un indice n en la funcion
-		a = Arrays.copyOf(a, a.length-1);
 		// Y retornamos el subconjunto contando el ultimo valor, y sin contarlo
 		return esSubconjuntoSumaExt(a, suma - last) || esSubconjuntoSumaExt(a, suma);
 	}
