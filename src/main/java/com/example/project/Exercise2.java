@@ -9,36 +9,23 @@ public class Exercise2 {
 		Exercise2 obj = new Exercise2();
 		Scanner sc = new Scanner(System.in);
 		while (true) {
-			int an = sc.nextInt()+2;
-			int a[] = new int[an];
-			a[0] = an-2;
-			for (int i = 1; i < an; i++) {
-				int n = sc.nextInt();
+
+			int n = sc.nextInt(), suma;
+			int a[] = new int[n];
+
+			for (int i = 0; i < n; i++) {
+				n = sc.nextInt();
 				a[i] = n;
 			}
 
-			System.out.println(obj.esSubconjuntoSumaExt(a));
+			suma = sc.nextInt();
+
+			System.out.println(obj.esSubconjuntoSumaExt(a, suma));
 		}
 	}
 
-	public boolean esSubconjuntoSumaExt(int a[]) {
-		//System.out.println("In: " + Arrays.toString(a));
-		if (a[a.length-1] == 0) { 
-			System.out.println("\ttrue\n");
-			return true;
-		}
-		if (a[0] == 0 || a[a.length-1] < 0) { 
-			System.out.println("\tfalse\n");
-			return false;
-		}
-		/* verificamos si conseguimos la suma por alguna de las siguientes formas:
-		(a) incluyendo el primer elemento
-		(b) excluyendo el primer elemento */
-		a[0]--;
-		int b[] = a.clone();
-		b[b.length-1] -= b[b[0]+1];
-		//System.out.println("\ta: " + Arrays.toString(a));
-		//System.out.println("\tb: " + Arrays.toString(b));
-		return esSubconjuntoSumaExt(a) || esSubconjuntoSumaExt(b);
+	public boolean esSubconjuntoSumaExt(int a[], int suma) {
+
+		return false;
 	}
 }
