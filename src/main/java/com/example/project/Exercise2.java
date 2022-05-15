@@ -25,7 +25,6 @@ public class Exercise2 {
 	}
 
 	public boolean esSubconjuntoSumaExt(int a[], int suma) {
-		// System.out.println("\ta: " + Arrays.toString(a) + "\tsum: " + suma);
 		// Si "suma" es 0, significa que dentro del array hay numeros cuya suma es igual a "suma"
 		if (suma == 0)
 			return true;
@@ -34,18 +33,18 @@ public class Exercise2 {
 			return false;
 		// Guardamos el ultimo valor del array antes de eliminarlo y para analizarlo
 		int last = a[a.length-1];
-		// Eliminamos el ultimo valor, ya que no tenemos un indice n en la funcion
 		a = copyOf(a, a.length-1);
-		// si el ultimo valor es 1
+		// si este valor es 1
 		if (last == 1 && a.length>1)
 			// Revisa, si se puede, si el valor siguiente es multiplo de 7
-			if (a[a.length-2] % 7 == 0)
+			if (a[a.length-1] % 7 == 0)
 				// Si lo es, lo reemplaza por 0, asi no contaria en la suma
-				a[a.length-2] = 0;
+				a[a.length-1] = 0;
 		// Si el ultimo valor es diferente de 0, pero multiplo de 7
 		if (last != 0 && last % 7 == 0)
 			// Se considera obligatoriamente en la suma
 			return esSubconjuntoSumaExt(a, suma - last);
+		// Eliminamos el ultimo valor, ya que no tenemos un indice n en la funcion
 		// Y retornamos el subconjunto contando el ultimo valor, y sin contarlo
 		return esSubconjuntoSumaExt(a, suma - last) || esSubconjuntoSumaExt(a, suma);
 	}
