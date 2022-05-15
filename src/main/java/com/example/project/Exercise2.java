@@ -49,4 +49,11 @@ public class Exercise2 {
 		// Y retornamos el subconjunto contando el ultimo valor, y sin contarlo
 		return esSubconjuntoSumaExt(a, suma - last) || esSubconjuntoSumaExt(a, suma);
 	}
+	
+	public int[] copyOf(int[] a, int length) {
+		int []A = new int[length];
+		for (int i=0; i < length; i++)
+			A[i] = a[i];
+		return A;
+	}
 }
