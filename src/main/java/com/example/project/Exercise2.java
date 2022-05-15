@@ -6,7 +6,7 @@ public class Exercise2 {
 
 	public static void main(final String[] args) {
 
-		Ejercicio2 obj = new Ejercicio2();
+		Exercise2 obj = new Exercise2();
 		Scanner sc = new Scanner(System.in);
 		while (true) {
 			int an = sc.nextInt()+2;
@@ -22,7 +22,7 @@ public class Exercise2 {
 	}
 
 	public boolean esSubconjuntoSumaExt(int a[]) {
-		System.out.println("In: " + Arrays.toString(a));
+		//System.out.println("In: " + Arrays.toString(a));
 		if (a[a.length-1] == 0) { 
 			System.out.println("\ttrue\n");
 			return true;
@@ -37,8 +37,8 @@ public class Exercise2 {
 		a[0]--;
 		int b[] = a.clone();
 		b[b.length-1] -= b[b[0]+1];
-		System.out.println("\ta: " + Arrays.toString(a));
-		System.out.println("\tb: " + Arrays.toString(b));
+		//System.out.println("\ta: " + Arrays.toString(a));
+		//System.out.println("\tb: " + Arrays.toString(b));
 		return esSubconjuntoSumaExt(a) || esSubconjuntoSumaExt(b);
 	}
 }
